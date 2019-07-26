@@ -17,11 +17,15 @@
 #include <GL/glut.h>
 #endif
 
-//int main(int argc, const char * argv[]) {
-//    // insert code here...
-//    std::cout << "Hello, World!\n";
-//    return 0;
-//}
+#include <chrono>
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <algorithm>
+
+#include "utils/LoadShader.h"
+
 
 void display()
 {
@@ -31,13 +35,19 @@ void display()
     glVertex2f(-0.5, 0.5);
     glVertex2f(0.5, 0.5);
     glVertex2f(0.5, -0.5);
+    
+    GLuint programID = LoadShaders("./shaders/start.vert", "./shaders/start.frag");
+    glUseProgram(programID);
+    
+    
     glEnd();
     glFlush();
 }
 int main(int argc, char ** argv)
 {
     glutInit(&argc, argv);
-    glutCreateWindow("Xcode Glut Demo");
+    glutInitWindowSize(1600,900);
+    glutCreateWindow("opengl Glut Demo");
     glutDisplayFunc(display);
     glutMainLoop();
 }

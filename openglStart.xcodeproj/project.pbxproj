@@ -10,6 +10,7 @@
 		80CE4FB622EA88B2001FB11E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80CE4FB522EA88B2001FB11E /* main.cpp */; };
 		80CE4FBE22EA88BE001FB11E /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CE4FBD22EA88BE001FB11E /* OpenGL.framework */; };
 		80CE4FC022EA88C5001FB11E /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CE4FBF22EA88C5001FB11E /* GLUT.framework */; };
+		80CE4FC522EA9665001FB11E /* LoadShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80CE4FC422EA9665001FB11E /* LoadShader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		80CE4FBF22EA88C5001FB11E /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		80CE4FC122EA88FB001FB11E /* start.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = start.vert; sourceTree = "<group>"; };
 		80CE4FC222EA8913001FB11E /* start.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = start.frag; sourceTree = "<group>"; };
+		80CE4FC422EA9665001FB11E /* LoadShader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LoadShader.cpp; sourceTree = "<group>"; };
+		80CE4FC622EA9748001FB11E /* LoadShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadShader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +69,9 @@
 		80CE4FB422EA88B2001FB11E /* openglStart */ = {
 			isa = PBXGroup;
 			children = (
+				80CE4FC822EA97B2001FB11E /* shaders */,
+				80CE4FC722EA97A4001FB11E /* utils */,
 				80CE4FB522EA88B2001FB11E /* main.cpp */,
-				80CE4FC122EA88FB001FB11E /* start.vert */,
-				80CE4FC222EA8913001FB11E /* start.frag */,
 			);
 			path = openglStart;
 			sourceTree = "<group>";
@@ -80,6 +83,24 @@
 				80CE4FBD22EA88BE001FB11E /* OpenGL.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80CE4FC722EA97A4001FB11E /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				80CE4FC422EA9665001FB11E /* LoadShader.cpp */,
+				80CE4FC622EA9748001FB11E /* LoadShader.h */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		80CE4FC822EA97B2001FB11E /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				80CE4FC122EA88FB001FB11E /* start.vert */,
+				80CE4FC222EA8913001FB11E /* start.frag */,
+			);
+			path = shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80CE4FC522EA9665001FB11E /* LoadShader.cpp in Sources */,
 				80CE4FB622EA88B2001FB11E /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
